@@ -8,9 +8,24 @@ namespace ClassRoomNet60
 {
     public class Student
     {
+        private int _birthMonth;
 
         public string Name { get; private set; }
-        public int BirthMonth { get; private set; }
+        public int BirthMonth 
+        {
+            get { return _birthMonth; }
+            private set 
+            {
+                if(value > 0 && value < 13)
+                {
+                _birthMonth = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Birth Month must be between 1-12");
+                }
+            }
+        }
         public int BirthDay { get; private set;}
 
         public Student(string name, int birthMonth, int birthDay)
