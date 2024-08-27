@@ -19,5 +19,10 @@ namespace ClassRoomNet60
             BirthMonth = birthMonth;
             BirthDay = birthDay;
         }
+
+        public override string ToString()
+        {
+            return $"{{{nameof(Name)}={Name}, {nameof(BirthMonth)}={BirthMonth.ToString()}, {nameof(BirthDay)}={BirthDay.ToString()}}}";
+        }
     }
 }
