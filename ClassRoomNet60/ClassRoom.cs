@@ -26,6 +26,17 @@ namespace ClassRoomNet60
             }
         }
 
+        public void birthdaysinseason()
+        {
+            var seasonlist = new List<string> { "Winter", "Spring", "Summer", "Autumn"};
+
+            foreach (var season in seasonlist)
+            {
+            Console.WriteLine($"Birthdays in {season}: {StudentList.Where(s => s.season(s.BirthMonth) == season).Count()}");
+
+            }
+        }
+
         public override string ToString()
         {
             printlist();

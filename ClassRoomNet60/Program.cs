@@ -11,3 +11,5 @@ classRoom.StudentList.Add(new Student("Mathias",8,11));
 classRoom.StudentList.Add(new Student("Sebastian", 4, 5));
 
 Console.WriteLine(classRoom);
+
+classRoom.birthdaysinseason();
