@@ -11,15 +11,25 @@ namespace ClassRoomNet60
         public string ClassName { get; set; }
         public List<Student> StudentList { get; set; } = new List<Student>();
         public DateTime SemesterStart { get; set; }
+        public string StudentInfo { get; set; }
 
         public ClassRoom()
         {
             
         }
 
+        public void printlist()
+        {
+            foreach (Student student in StudentList)
+            {
+                StudentInfo += student.ToString();
+            }
+        }
+
         public override string ToString()
         {
-            return $"{{{nameof(ClassName)}={ClassName}, {nameof(StudentList)}={StudentList}, {nameof(SemesterStart)}={SemesterStart.ToString()}}}";
+            printlist();
+            return $"{{{nameof(ClassName)}={ClassName}, {StudentInfo}, {nameof(SemesterStart)}={SemesterStart.ToString()}}}";
         }
     }
 }

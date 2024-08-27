@@ -10,7 +10,4 @@ classRoom.SemesterStart = new DateTime(2019,8,11);
 classRoom.StudentList.Add(new Student("Mathias",8,11));
 classRoom.StudentList.Add(new Student("Sebastian", 4, 5));
 
-foreach (Student student in classRoom.StudentList)
-{
-    Console.WriteLine(student);
-}
+Console.WriteLine(classRoom);
